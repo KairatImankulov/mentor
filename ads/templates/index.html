@@ -14,6 +14,8 @@
         {% for ads in all_ads %}
         <div class="card" style="width: 28rem">
             <div class="card-body">
+                <h5 class="card-title">{{ ads.owner }}</h5>
+                <h5 class="card-title">{{ ads.subcategory }}</h5>
                 <h5 class="card-title">{{ ads.title }}</h5>
                 <p class="card-text">{{ ads.description }}</p>
                 <p class="card-text bg-body-tertiary" style="transform: rotate(0)">
@@ -27,10 +29,10 @@
                 <p class="card-text bg-body-tertiary" style="transform: rotate(0)">
                     {{ads.created_at|date:"d.m.Y"}}
                 </p>
+                <img src="{{ ads.image.url }}">
             </div>
         </div>
         {% endfor %}
     </div>
 </body>
-
 </html>
