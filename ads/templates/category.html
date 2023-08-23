@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title> Категория </title>
+{% endblock %}
+
+{% block content %}
+    {% for category in all_categoryes %}
+        <h2>{{category.title}}</h2>
+    {% endfor %}    
+{% endblock %}

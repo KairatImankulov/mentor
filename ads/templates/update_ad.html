@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {{ form_of_ad.as_p }}
+
+    <button type="submit"> Update </button>
+    
+</form>
+
+{% endblock %}
